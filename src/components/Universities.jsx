@@ -7,6 +7,7 @@ const universities = [
   { name: 'Harvard', file: 'harvard.png' },
   { name: 'Yale', file: 'yale.png' },
   { name: 'MIT', file: 'mit.png' },
+  { name: 'NYU', file: 'nyu.png' },
 ];
 
 export default function Universities() {
