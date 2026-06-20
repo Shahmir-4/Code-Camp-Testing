@@ -25,7 +25,8 @@ export default function Universities() {
               key={u.name}
               src={`/logos/${u.file}`}
               alt={`${u.name} logo`}
-              className="h-9 sm:h-11 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"
+              style={{ height: '44px', width: 'auto' }}
+              className="object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"
             />
           ))}
         </div>
