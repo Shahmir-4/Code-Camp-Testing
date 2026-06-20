@@ -3,7 +3,7 @@ import Reveal from './Reveal';
 
 // 👉 Paste the Web App URL you get from deploying the Google Apps Script here.
 // See SETUP.md in the project root for the exact steps.
-const FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzs3LmEmZV5MaLFyNOw7ZhBOdc4xP9hKKRF1FVjUMSLk3lPVoRQO-MdGi7EQ-ZyNwVomA/exec';
+const FORM_ENDPOINT = 'PASTE_YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
 
 export default function Signup() {
   const [status, setStatus] = useState('idle'); // idle | loading | success | error
@@ -47,7 +47,7 @@ export default function Signup() {
               You're on the list.
             </h2>
             <p className="mt-3 text-ash text-sm sm:text-base">
-              Check your inbox at <span className="text-paper">{values.email}</span> — we'll
+              Check your inbox at <span className="text-paper">{values.email}</span> - we'll
               send your cohort details within 24 hours.
             </p>
           </div>
@@ -64,7 +64,7 @@ export default function Signup() {
           Takes 20 seconds.
         </h2>
         <p className="mt-3 text-ash text-center text-sm sm:text-base">
-          Just your name and email — we'll handle the rest.
+          Just your name and email - we'll handle the rest.
         </p>
       </Reveal>
 

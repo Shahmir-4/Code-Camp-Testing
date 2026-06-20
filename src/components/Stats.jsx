@@ -1,10 +1,10 @@
 import Reveal from './Reveal';
 
 const stats = [
-  { value: '6', label: 'weeks, start to shipped' },
-  { value: '1:12', label: 'mentor to student ratio' },
-  { value: '40+', label: 'hrs of live instruction' },
-  { value: '92%', label: 'finish with a live project' },
+  { value: '4', label: 'weeks, start to capstone' },
+  { value: '8', label: 'live sessions total' },
+  { value: '16', label: 'hrs of live instruction' },
+  { value: '3', label: 'cohort dates to choose from' },
 ];
 
 export default function Stats() {

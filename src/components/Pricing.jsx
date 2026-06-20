@@ -6,10 +6,10 @@ export default function Pricing() {
   };
 
   const included = [
-    '6 weeks of live, mentor-led sessions',
-    'Personal code review every week',
-    '1:1 mentor support via chat',
-    'A finished, portfolio-ready project',
+    '4 weeks of live, mentor-led sessions',
+    'Coding, Excel, and AI - all in one program',
+    'Personal project review every week',
+    'A capstone project for university applications',
     'Certificate of completion',
   ];
 
@@ -25,16 +25,16 @@ export default function Pricing() {
       <Reveal delay={0.1}>
         <div className="mt-12 border border-hairline p-7 sm:p-10 max-w-lg">
           <div className="inline-block font-mono text-xs font-semibold bg-lime text-ink px-2.5 py-1 mb-5">
-            EARLY BIRD — 40% OFF
+            EARLY REGISTRATION DISCOUNT
           </div>
 
           <div className="flex items-end gap-3 flex-wrap">
-            <span className="font-mono text-2xl text-ash line-through">Rs 25,000</span>
+            <span className="font-mono text-2xl text-ash line-through">PKR 7,500</span>
             <span className="font-mono text-5xl sm:text-6xl font-bold text-paper">
-              Rs 15,000
+              PKR 5,000
             </span>
           </div>
-          <p className="mt-2 text-sm text-ash">one-time payment · full 6-week camp</p>
+          <p className="mt-2 text-sm text-ash">one-time payment - full 4-week camp</p>
 
           <ul className="mt-7 space-y-3">
             {included.map((item) => (
@@ -52,7 +52,7 @@ export default function Pricing() {
             Lock in this price →
           </button>
           <p className="mt-3 text-center text-xs text-ash">
-            Discount applies to the next 30 sign-ups only
+            Seats limited - early registration recommended
           </p>
         </div>
       </Reveal>

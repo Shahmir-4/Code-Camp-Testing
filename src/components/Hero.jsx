@@ -49,9 +49,9 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.25 }}
           className="mt-6 text-base sm:text-lg text-ash max-w-xl mx-auto leading-relaxed"
         >
-          A 6-week coding camp that takes you from your first line of code to
-          a shipped project — with a mentor checking your work every step of
-          the way.
+          A 4-week camp in coding, Excel, and AI that takes your child from
+          first principles to a capstone project - with a mentor checking
+          their work every step of the way.
         </motion.p>
 
         <motion.div

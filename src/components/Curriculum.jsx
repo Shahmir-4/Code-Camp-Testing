@@ -1,41 +1,35 @@
 import Reveal from './Reveal';
 
+const cohorts = [
+  { label: 'Cohort 1', dates: 'July 4 - July 26' },
+  { label: 'Cohort 2', dates: 'July 18 - August 9' },
+  { label: 'Cohort 3', dates: 'August 1 - August 23' },
+];
+
 const weeks = [
   {
     hash: 'a1f9c02',
-    title: 'Foundations',
+    title: 'Coding in Python',
     detail:
-      'Variables, logic, and how a program actually runs. You write your first 50 lines of real code.',
+      'Build a strong programming foundation, plus problem-solving and algorithmic thinking.',
   },
   {
     hash: 'e3b71d4',
-    title: 'Structure & Logic',
+    title: 'Excel for the Real World',
     detail:
-      'Functions, loops, and breaking a big problem into small ones. First mini project, built solo.',
+      'From basics to advanced formulas - financial modeling and data analysis.',
   },
   {
     hash: '0c44af9',
-    title: 'Building for the Web',
+    title: 'AI + Coding + Excel Integration',
     detail:
-      'HTML, CSS, and your first interactive page. This is where "code" starts looking like a website.',
+      'Hands-on introduction to AI, learning how to link coding and Excel with AI tools to build future-ready projects.',
   },
   {
     hash: '7d2e615',
-    title: 'Making it Dynamic',
+    title: 'Data Analytics & Capstone Showcase',
     detail:
-      'JavaScript fundamentals — events, data, and making a page respond to what a user does.',
-  },
-  {
-    hash: 'b58a3f1',
-    title: 'Connecting the Pieces',
-    detail:
-      'APIs and data: pulling real information into your project and rendering it on screen.',
-  },
-  {
-    hash: 'f902cc7',
-    title: 'Ship It',
-    detail:
-      'Polish, deploy, and present your project to the cohort and mentors. This is the one that goes in your portfolio.',
+      'Dive into data visualization and extraction, and build a future-ready project that stands out on university applications.',
   },
 ];
 
@@ -45,15 +39,34 @@ export default function Curriculum() {
       <Reveal>
         <p className="font-mono text-xs sm:text-sm text-lime mb-3">// curriculum</p>
         <h2 className="font-mono text-3xl sm:text-5xl font-bold text-paper leading-tight">
-          Six weeks. Six commits.
+          Four weeks. Four commits.
         </h2>
         <p className="mt-4 text-ash max-w-xl">
-          Think of each week as a commit to your own skillset — small,
-          working, and building on the last one.
+          Each week is a commit to your own skillset - small, working, and
+          building on the last one.
         </p>
       </Reveal>
 
-      <div className="mt-14 border border-hairline bg-[#0d0d0c]">
+      {/* Cohort date picker */}
+      <Reveal delay={0.05}>
+        <div className="mt-10 grid sm:grid-cols-3 gap-3">
+          {cohorts.map((c) => (
+            <div
+              key={c.label}
+              className="border border-hairline px-5 py-4 hover:border-lime transition-colors duration-200"
+            >
+              <p className="font-mono text-xs text-lime mb-1">{c.label}</p>
+              <p className="font-mono text-sm sm:text-base text-paper">{c.dates}</p>
+            </div>
+          ))}
+        </div>
+        <p className="mt-3 text-xs text-ash">
+          2 sessions every weekend (Saturday &amp; Sunday) - 2 hours per session.
+          Pick your cohort when you sign up.
+        </p>
+      </Reveal>
+
+      <div className="mt-12 border border-hairline bg-[#0d0d0c]">
         <div className="flex items-center gap-2 px-4 sm:px-5 py-3 border-b border-hairline">
           <span className="w-2.5 h-2.5 rounded-full bg-hairline" />
           <span className="w-2.5 h-2.5 rounded-full bg-hairline" />

@@ -1,5 +1,6 @@
 import Nav from './components/Nav';
 import Hero from './components/Hero';
+import Universities from './components/Universities';
 import Stats from './components/Stats';
 import Program from './components/Program';
 import Curriculum from './components/Curriculum';
@@ -14,6 +15,7 @@ function App() {
     <div className="min-h-screen pb-12">
       <Nav />
       <Hero />
+      <Universities />
       <Stats />
       <Program />
       <Curriculum />

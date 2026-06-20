@@ -5,7 +5,7 @@ import Reveal from './Reveal';
 const faqs = [
   {
     q: 'I have zero coding experience. Can I still join?',
-    a: 'Yes — week one assumes nothing. We start from what a variable is and build up from there. Most of our campers start with no prior experience.',
+    a: 'Yes - week one assumes nothing. We start from what a variable is and build up from there. Most of our campers start with no prior experience.',
   },
   {
     q: 'What if I miss a session?',
@@ -13,11 +13,11 @@ const faqs = [
   },
   {
     q: 'Do I need my own laptop?',
-    a: 'Yes, a laptop (Windows, Mac, or Linux) is required. No special hardware — anything from the last 5–6 years works fine.',
+    a: 'Yes, a laptop (Windows, Mac, or Linux) is required. No special hardware - anything from the last 5-6 years works fine.',
   },
   {
     q: 'Is there a refund if it’s not for me?',
-    a: "Yes. If you attend the first week and decide it's not a fit, we'll refund you in full — no questions asked.",
+    a: "Yes. If you attend the first week and decide it's not a fit, we'll refund you in full - no questions asked.",
   },
   {
     q: 'What happens after I sign up?',

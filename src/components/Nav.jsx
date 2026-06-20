@@ -21,7 +21,7 @@ export default function Nav() {
     >
       <div className="max-w-6xl mx-auto flex items-center justify-between px-5 sm:px-8 py-4">
         <span className="font-mono text-sm sm:text-base font-bold tracking-tight text-paper">
-          <span className="text-lime">$</span> camp.init
+          Code Camp <span className="text-lime">&apos;26</span>
         </span>
         <button
           onClick={scrollToSignup}
