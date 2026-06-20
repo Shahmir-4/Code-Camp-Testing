@@ -25,7 +25,7 @@ export default function Universities() {
               key={u.name}
               src={`/logos/${u.file}`}
               alt={`${u.name} logo`}
-              style={{ height: '44px', width: 'auto' }}
+              style={{ height: '60px', width: 'auto' }}
               className="object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"
             />
           ))}
