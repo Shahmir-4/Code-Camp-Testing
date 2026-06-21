@@ -41,38 +41,6 @@ export default function Universities() {
 
       <Reveal delay={0.1}>
         <div className="relative overflow-hidden" style={{ height: '120px' }}>
-          {/* Spotlight glow, fixed in the center - atmosphere only, not tied to any single logo */}
-          <div
-            className="absolute top-0 left-1/2 pointer-events-none z-10"
-            style={{
-              width: '380px',
-              height: '120px',
-              transform: 'translateX(-50%)',
-              background:
-                'radial-gradient(ellipse 55% 90% at 50% 0%, rgba(198,255,61,0.18), rgba(198,255,61,0.05) 50%, transparent 78%)',
-            }}
-          />
-          <div
-            className="absolute top-0 left-1/2 pointer-events-none z-10"
-            style={{
-              width: '2px',
-              height: '90px',
-              transform: 'translateX(-85px) skewX(7deg)',
-              background:
-                'linear-gradient(to bottom, rgba(198,255,61,0.4), transparent)',
-            }}
-          />
-          <div
-            className="absolute top-0 left-1/2 pointer-events-none z-10"
-            style={{
-              width: '2px',
-              height: '90px',
-              transform: 'translateX(83px) skewX(-7deg)',
-              background:
-                'linear-gradient(to bottom, rgba(198,255,61,0.4), transparent)',
-            }}
-          />
-
           {/* Fade the belt out at both edges so logos don't pop in/out abruptly */}
           <div
             className="absolute inset-0 z-20 pointer-events-none"
