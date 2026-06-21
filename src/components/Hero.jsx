@@ -7,6 +7,9 @@ export default function Hero() {
   const scrollToCurriculum = () => {
     document.getElementById('curriculum')?.scrollIntoView({ behavior: 'smooth' });
   };
+  const scrollToCohorts = () => {
+    document.getElementById('cohorts')?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <section className="relative min-h-[100svh] flex flex-col items-center justify-center px-5 pt-24 pb-16 overflow-hidden">
@@ -58,13 +61,19 @@ export default function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3"
+          className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 flex-wrap"
         >
           <button
             onClick={scrollToSignup}
             className="w-full sm:w-auto font-mono font-semibold text-sm px-7 py-3.5 bg-lime text-ink hover:bg-paper transition-colors duration-200"
           >
             Reserve my seat →
+          </button>
+          <button
+            onClick={scrollToCohorts}
+            className="w-full sm:w-auto font-mono text-sm px-7 py-3.5 border border-hairline text-paper hover:border-lime hover:text-lime transition-colors duration-200"
+          >
+            Available cohorts
           </button>
           <button
             onClick={scrollToCurriculum}

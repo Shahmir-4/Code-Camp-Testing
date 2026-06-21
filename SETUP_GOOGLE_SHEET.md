@@ -7,7 +7,7 @@ account signups, no API keys, no monthly limits for this volume of traffic.
 
 1. Go to [sheets.google.com](https://sheets.google.com) and create a new blank sheet.
 2. Name it something like `Coding Camp Signups`.
-3. In row 1, add these headers exactly: `Timestamp | Name | Email | Phone`
+3. In row 1, add these headers exactly: `Timestamp | Name | Email | Phone | Cohort`
 
 ## Step 2 — Open the Script Editor
 
@@ -24,6 +24,7 @@ function doPost(e) {
     data.name || '',
     data.email || '',
     data.phone || '',
+    data.cohort || '',
   ]);
 
   return ContentService
@@ -73,6 +74,14 @@ Sheet in real time.
 2. Check your Google Sheet — a new row should appear within a second or two.
 3. If nothing shows up: re-check that "Who has access" was set to **Anyone**,
    and that you copied the `/exec` URL (not `/dev`).
+
+## If you already set this up before adding the Cohort field
+
+Go back into **Extensions → Apps Script**, update the `sheet.appendRow([...])`
+line to include `data.cohort || '',` (as shown above), save, then create a
+**new deployment** (Deploy → Manage deployments → pencil icon → New version)
+so the change goes live. Also add a `Cohort` header to column E in your
+Sheet if it isn't there already.
 
 ## Re-deploying after changes
 

@@ -49,7 +49,7 @@ export default function Curriculum() {
 
       {/* Cohort date picker */}
       <Reveal delay={0.05}>
-        <div className="mt-10 grid sm:grid-cols-3 gap-3">
+        <div id="cohorts" className="mt-10 grid sm:grid-cols-3 gap-3 scroll-mt-24">
           {cohorts.map((c) => (
             <div
               key={c.label}

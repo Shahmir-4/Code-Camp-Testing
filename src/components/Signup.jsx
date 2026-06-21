@@ -3,11 +3,18 @@ import Reveal from './Reveal';
 
 // 👉 Paste the Web App URL you get from deploying the Google Apps Script here.
 // See SETUP.md in the project root for the exact steps.
-const FORM_ENDPOINT = 'PASTE_YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
+const FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzs3LmEmZV5MaLFyNOw7ZhBOdc4xP9hKKRF1FVjUMSLk3lPVoRQO-MdGi7EQ-ZyNwVomA/exec';
+
+// Keep these in sync with the cohort dates in Curriculum.jsx
+const cohortOptions = [
+  'Cohort 1: July 4 - July 26',
+  'Cohort 2: July 18 - August 9',
+  'Cohort 3: August 1 - August 23',
+];
 
 export default function Signup() {
   const [status, setStatus] = useState('idle'); // idle | loading | success | error
-  const [values, setValues] = useState({ name: '', email: '', phone: '' });
+  const [values, setValues] = useState({ name: '', email: '', phone: '', cohort: '' });
 
   const handleChange = (e) => {
     setValues((v) => ({ ...v, [e.target.name]: e.target.value }));
@@ -15,7 +22,13 @@ export default function Signup() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!values.name.trim() || !values.email.trim()) return;
+    if (
+      !values.name.trim() ||
+      !values.email.trim() ||
+      !values.phone.trim() ||
+      !values.cohort.trim()
+    )
+      return;
 
     setStatus('loading');
     try {
@@ -27,6 +40,7 @@ export default function Signup() {
           name: values.name,
           email: values.email,
           phone: values.phone,
+          cohort: values.cohort,
           timestamp: new Date().toISOString(),
         }),
       });
@@ -64,7 +78,7 @@ export default function Signup() {
           Takes 20 seconds.
         </h2>
         <p className="mt-3 text-ash text-center text-sm sm:text-base">
-          Just your name and email - we'll handle the rest.
+          Just a few details and you're booked in.
         </p>
       </Reveal>
 
@@ -101,17 +115,46 @@ export default function Signup() {
           </div>
 
           <div>
-            <label htmlFor="phone" className="sr-only">Phone number (optional)</label>
+            <label htmlFor="phone" className="sr-only">Phone number</label>
             <input
               id="phone"
               name="phone"
               type="tel"
+              required
               autoComplete="tel"
-              placeholder="Phone number (optional)"
+              placeholder="Phone number"
               value={values.phone}
               onChange={handleChange}
               className="w-full bg-transparent border border-hairline focus:border-lime outline-none px-5 py-4 text-base text-paper placeholder:text-ash transition-colors duration-200"
             />
+          </div>
+
+          <div>
+            <label htmlFor="cohort" className="sr-only">Choose your cohort</label>
+            <select
+              id="cohort"
+              name="cohort"
+              required
+              value={values.cohort}
+              onChange={handleChange}
+              className="w-full bg-transparent border border-hairline focus:border-lime outline-none px-5 py-4 text-base text-paper transition-colors duration-200 appearance-none"
+              style={{
+                backgroundImage:
+                  "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%238a8a85'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E\")",
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'right 1.1rem center',
+                backgroundSize: '1.1rem',
+              }}
+            >
+              <option value="" disabled className="text-ash">
+                Choose your cohort
+              </option>
+              {cohortOptions.map((c) => (
+                <option key={c} value={c} className="bg-ink text-paper">
+                  {c}
+                </option>
+              ))}
+            </select>
           </div>
 
           <button
