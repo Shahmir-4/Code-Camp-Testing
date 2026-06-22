@@ -3,7 +3,7 @@ import Reveal from './Reveal';
 
 // 👉 Paste the Web App URL you get from deploying the Google Apps Script here.
 // See SETUP.md in the project root for the exact steps.
-const FORM_ENDPOINT = 'PASTE_YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
+const FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzs3LmEmZV5MaLFyNOw7ZhBOdc4xP9hKKRF1FVjUMSLk3lPVoRQO-MdGi7EQ-ZyNwVomA/exec';
 
 // Keep these in sync with the cohort dates in Curriculum.jsx
 const cohortOptions = [
